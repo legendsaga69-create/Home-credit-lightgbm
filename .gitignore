@@ -1,0 +1,15 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Môi trường ảo
+venv/
+.env
+
+# Jupyter checkpoint
+.ipynb_checkpoints/
+
+# Data thô (không push lên)
+*.csv
+*.parquet

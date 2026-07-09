@@ -1,0 +1,22 @@
+services: # Khối khai báo danh sách các container sẽ khởi chạy trong hệ thống
+  
+  # Dịch vụ 1: Trạm xử lý thuật toán (FastAPI Backend)
+  backend: 
+    build: ./backend # Chỉ định đường dẫn tới thư mục chứa Dockerfile của backend để build hình ảnh (image)
+    container_name: home_credit_backend_api # Đặt tên cố định cho container khi chạy để dễ quản lý
+    ports:
+      - "8000:8000" # Ánh xạ cổng: [Cổng máy vật lý ngoài đời thực] : [Cổng chạy bên trong môi trường ảo Docker]
+    restart: always # Cơ chế tự động khởi động lại container nếu tiến trình bên trong bị sập do lỗi hệ thống
+
+  # Dịch vụ 2: Trạm hiển thị giao diện (Streamlit Frontend)
+  frontend:
+    build: ./frontend # Chỉ định đường dẫn tới thư mục chứa Dockerfile của frontend
+    container_name: home_credit_frontend_ui # Đặt tên cố định cho container giao diện
+    ports:
+      - "8501:8501" # Mở cổng 8501 ra ngoài máy vật lý để bạn có thể truy cập qua trình duyệt web
+    environment: # Phân vùng khai báo các biến môi trường truyền vào bên trong container frontend
+      - BACKEND_URL=http://backend:8000/predict # Thay vì dùng localhost, gọi trực tiếp tên dịch vụ 'backend' nhờ DNS nội bộ của Docker
+      - BACKEND_BATCH_URL=http://backend:8000/predict_batch
+    depends_on:
+      - backend # Chỉ thị cài đặt thứ tự: Hệ thống phải bật và chạy xong Backend rồi mới được phép bật Frontend
+    restart: always # Tự động khởi động lại nếu giao diện web gặp sự cố sập nguồn
