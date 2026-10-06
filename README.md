@@ -80,10 +80,10 @@ Tổng hợp đặc trưng từ 6 bảng phụ thành **8 nhóm feature**:
 | Bước lọc | Trước | Sau |
 |---|---|---|
 | Missing rate > 50% | 229 cột | 160 cột |
-| IV < 0.02 | 160 cột | 57 biến |
-| Stepwise VIF > 5 | 57 biến | 52 biến |
-| WoE variance = 0 | 52 biến | 48 biến |
-| p-value ≥ 0.05 | 48 biến | **39 biến** |
+| IV < 0.02 | 160 cột | 57 cột |
+| Stepwise VIF > 5 | 57 cột | 52 cột |
+| WoE variance = 0 | 52 cột | 48 cột |
+| p-value ≥ 0.05 | 48 cột | **39 cột** |
 
 ### Bước 2 — WoE / IV Binning
 
