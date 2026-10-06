@@ -89,11 +89,11 @@ Tổng hợp đặc trưng từ 6 bảng phụ thành **8 nhóm feature**:
 
 **Weight of Evidence (WoE):**
 
-$$WoE_i = \ln\left(\frac{\%Good_i}{\%Bad_i}\right)$$
+$$WoE_i = \ln \left( \frac{\text{Good}_i / \text{Good}_{\text{total}}}{\text{Bad}_i / \text{Bad}_{\text{total}}} \right)$$
 
 **Information Value (IV):**
 
-$$IV = \sum_{i=1}^{n} (\%Good_i - \%Bad_i) \times WoE_i$$
+$$IV = \sum_{i=1}^{n} \left( \frac{\text{Good}_i}{\text{Good}_{\text{total}}} - \frac{\text{Bad}_i}{\text{Bad}_{\text{total}}} \right) \times WoE_i$$
 
 Kỹ thuật áp dụng:
 - **Equal-frequency binning** (quantile): đảm bảo mỗi bin đủ observation
