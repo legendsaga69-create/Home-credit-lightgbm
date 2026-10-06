@@ -165,22 +165,22 @@ $$PD_i^{conditional} = \Phi\left(\frac{\Phi^{-1}(PD_i) - \sqrt{\rho} \cdot Z}{\s
 
 | Metric | Giá trị |
 |---|---|
-| Expected Loss (EL) | 1.22B VND (EL/EAD: 3.32%) |
-| VaR 95% | 2.95B VND |
-| VaR 99% | 4.34B VND |
-| Unexpected Loss (UL) | 3.12B VND |
+| Expected Loss (EL) | 1.22B (EL/EAD: 3.32%) |
+| VaR 95% | 2.95B |
+| VaR 99% | 4.34B |
+| Unexpected Loss (UL) | 3.12B |
 | Capital Ratio (UL/EAD) | **8.49%** |
 
 ### Stress Test (6 kịch bản)
 
 | Kịch bản | Z | PD TB | Tổn thất | Loss/EAD |
 |---|---|---|---|---|
-| Baseline | 0.0 | 6.65% | 0.99B VND | 2.70% |
-| Mild Stress | -0.5 | 9.50% | 1.43B VND | 3.89% |
-| Moderate Stress | -1.0 | 13.18% | 2.00B VND | 5.44% |
-| Severe Stress | -1.5 | 17.74% | 2.72B VND | 7.39% |
-| Extreme Stress | -2.0 | 23.19% | 3.58B VND | 9.74% |
-| High Extreme | -2.5 | 29.48% | 4.59B VND | 12.48% |
+| Baseline | 0.0 | 6.65% | 0.99B | 2.70% |
+| Mild Stress | -0.5 | 9.50% | 1.43B | 3.89% |
+| Moderate Stress | -1.0 | 13.18% | 2.00B | 5.44% |
+| Severe Stress | -1.5 | 17.74% | 2.72B | 7.39% |
+| Extreme Stress | -2.0 | 23.19% | 3.58B | 9.74% |
+| High Extreme | -2.5 | 29.48% | 4.59B | 12.48% |
 
 ---
 
